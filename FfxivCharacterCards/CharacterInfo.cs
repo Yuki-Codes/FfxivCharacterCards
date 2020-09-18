@@ -24,9 +24,9 @@ namespace FfxivCharacterCards
 		public string? DataCenter => this.xivApiCharacter?.DC;
 		public string? Bio => this.xivApiCharacter?.Bio;
 
-		public bool HasMounts => this.ffxivCollectCharacter != null && this.ffxivCollectCharacter.Mounts != null;
-		public bool HasMinions => this.ffxivCollectCharacter != null && this.ffxivCollectCharacter.Mounts != null;
-		public bool HasAchievements => this.ffxivCollectCharacter != null && this.ffxivCollectCharacter.Mounts != null;
+		public bool HasMounts => this.ffxivCollectCharacter != null && this.ffxivCollectCharacter.Mounts != null && this.ffxivCollectCharacter.Mounts.Count > 0;
+		public bool HasMinions => this.ffxivCollectCharacter != null && this.ffxivCollectCharacter.Minions != null && this.ffxivCollectCharacter.Minions.Count > 0;
+		public bool HasAchievements => this.ffxivCollectCharacter != null && this.ffxivCollectCharacter.Achievements != null && this.ffxivCollectCharacter.Achievements.Count > 0;
 
 		public (int Count, int Total) Mounts
 		{
