@@ -10,7 +10,7 @@ namespace FfxivCharacterCards
 
 	internal static class IImageProcessingContextExtensions
 	{
-		public static void DrawText(this IImageProcessingContext context, TextGraphicsOptions op, string? text, Font font, Color color, Rectangle bounds)
+		public static void DrawText(this IImageProcessingContext context, DrawingOptions op, string? text, Font font, Color color, Rectangle bounds)
 		{
 			if (text == null)
 				return;
@@ -38,7 +38,7 @@ namespace FfxivCharacterCards
 			context.DrawText(op, text, font, color, new Point(bounds.X, bounds.Y));
 		}
 
-		public static void DrawTextAnySize(this IImageProcessingContext context, TextGraphicsOptions op, string? text, FontFamily font, Color color, Rectangle bounds)
+		public static void DrawTextAnySize(this IImageProcessingContext context, DrawingOptions op, string? text, FontFamily font, Color color, Rectangle bounds)
 		{
 			if (string.IsNullOrEmpty(text))
 				return;

@@ -13,7 +13,7 @@ namespace FfxivCharacterCards
 			Antialias = true,
 		};
 
-		public static TextGraphicsOptions CenterText = new TextGraphicsOptions()
+		public static DrawingOptions CenterText = new DrawingOptions()
 		{
 			GraphicsOptions = FontGraphics,
 			TextOptions = new TextOptions()
@@ -23,7 +23,7 @@ namespace FfxivCharacterCards
 			},
 		};
 
-		public static TextGraphicsOptions LeftText = new TextGraphicsOptions()
+		public static DrawingOptions LeftText = new DrawingOptions()
 		{
 			GraphicsOptions = FontGraphics,
 			TextOptions = new TextOptions()
@@ -33,7 +33,7 @@ namespace FfxivCharacterCards
 			},
 		};
 
-		public static TextGraphicsOptions RightText = new TextGraphicsOptions()
+		public static DrawingOptions RightText = new DrawingOptions()
 		{
 			GraphicsOptions = FontGraphics,
 			TextOptions = new TextOptions()

@@ -22,7 +22,12 @@ namespace FfxivCharacterCards
 			StreamReader reader = new StreamReader(response.GetResponseStream());
 			string json = await reader.ReadToEndAsync();
 
-			return JsonSerializer.Deserialize<T>(json, options);
+			T val = JsonSerializer.Deserialize<T>(json, options);
+
+			if (val == null)
+				throw new System.Exception("Failed to deserialize json");
+
+			return val;
 		}
 	}
 }
